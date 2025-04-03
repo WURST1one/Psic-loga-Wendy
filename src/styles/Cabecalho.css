@@ -61,35 +61,38 @@
   transform: translateY(-3px);
 }
 
-/* Estilo do ícone de menu "sanduíche" */
+/* 🔹 Ícone do menu hamburguer */
 .menu-toggle {
-  display: none; /* Esconder por padrão (desktop) */
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: 10px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 1001;
 }
 
-.menu-icon,
-.menu-icon::before,
-.menu-icon::after {
-  display: block;
-  background-color: #fff;
-  height: 3px;
-  width: 25px;
-  transition: all 0.3s ease;
-}
-
 .menu-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
   position: relative;
+  display: block;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-icon::before,
 .menu-icon::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-icon::before {
@@ -100,9 +103,9 @@
   top: 8px;
 }
 
-/* Animação do ícone ao abrir/fechar o menu */
+/* 🔹 Animação ao abrir */
 .menu-toggle.open .menu-icon {
-  background: transparent;
+  background-color: transparent;
 }
 
 .menu-toggle.open .menu-icon::before {
@@ -115,7 +118,7 @@
   top: 0;
 }
 
-/* Responsividade */
+/* 🔹 Responsividade */
 @media (max-width: 768px) {
   .cabecalho {
     flex-direction: row;
@@ -124,11 +127,11 @@
   }
 
   .menu-toggle {
-    display: block; /* Mostrar o ícone de menu no celular */
+    display: block; /* Agora aparece no mobile */
   }
 
   .navegacao {
-    display: none; /* Esconder o menu por padrão no celular */
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -143,7 +146,7 @@
   }
 
   .navegacao.open {
-    display: flex; /* Mostrar o menu quando aberto */
+    display: flex;
     transform: translateY(0);
   }
 

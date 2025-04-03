@@ -6,6 +6,7 @@
   min-height: 100vh;
   background: none;
   margin-bottom: 200px;
+  gap: 200px; /* 🔹 Aumentei ainda mais a distância entre texto e imagem */
 }
 
 .introducao-conteudo {
@@ -13,7 +14,7 @@
   text-align: left;
   margin-left: 50px;
   background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
 }
 
@@ -65,7 +66,7 @@
 
 .introducao-imagem img {
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
@@ -83,6 +84,7 @@
     flex-direction: column;
     padding: 80px 20px;
     min-height: auto;
+    gap: 100px; /* 🔹 Aumentei ainda mais no mobile */
   }
 
   .introducao-conteudo {
@@ -110,13 +112,14 @@
   }
 
   .introducao-imagem img {
-    max-width: 300px;
+    max-width: 350px;
   }
 }
 
 @media (max-width: 480px) {
   .introducao {
     padding: 60px 15px;
+    gap: 80px; /* 🔹 Mais espaço no mobile */
   }
 
   .introducao-conteudo h1 {
@@ -133,6 +136,6 @@
   }
 
   .introducao-imagem img {
-    max-width: 250px;
+    max-width: 300px;
   }
 }

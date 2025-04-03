@@ -10,17 +10,15 @@ const Cabecalho = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const scrollToSection = (sectionId) => {
-    setIsMenuOpen(false);
-    const section = document.getElementById(sectionId);
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
     if (section) {
-      const headerHeight = document.querySelector('.cabecalho').offsetHeight;
-      const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
-        top: sectionPosition - headerHeight - 20,
-        behavior: 'smooth',
+        top: section.offsetTop - 80, // Ajusta para não ficar colado no topo
+        behavior: 'smooth', // Animação suave
       });
     }
+    setIsMenuOpen(false);
   };
 
   return (
@@ -32,29 +30,17 @@ const Cabecalho = () => {
           <span className="logo-psicologia">Psicologia</span>
         </div>
       </div>
-      <button className="menu-toggle" onClick={toggleMenu}>
+
+      {/* Botão do menu hamburguer */}
+      <button className={`menu-toggle ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span className="menu-icon"></span>
       </button>
+
+      {/* Menu de navegação */}
       <nav className={`navegacao ${isMenuOpen ? 'open' : ''}`}>
-        <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-        <a
-          href="#abordagem-terapeutica"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection('abordagem-terapeutica');
-          }}
-        >
-          Sobre
-        </a>
-        <a
-          href="#servicos-oferecidos"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection('servicos-oferecidos');
-          }}
-        >
-          Serviços
-        </a>
+        <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>Home</a>
+        <a href="#abordagem-terapeutica" onClick={(e) => { e.preventDefault(); scrollToSection('abordagem-terapeutica'); }}>Sobre</a>
+        <a href="#servicos-oferecidos" onClick={(e) => { e.preventDefault(); scrollToSection('servicos-oferecidos'); }}>Serviços</a>
       </nav>
     </header>
   );
