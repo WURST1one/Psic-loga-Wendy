@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/ServicosOferecidos.css';
 import fotoPsicologa from '../assets/Rectangle 9.png';
-import instagramIcon from '../assets/instagram.svg';
+import instagramIcon from '..//assets/Instagram.svg';
 import whatsappIcon from '../assets/WhatsApp.svg';
 
 const ServicosOferecidos = () => {
