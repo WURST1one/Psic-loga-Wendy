@@ -1,0 +1,80 @@
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 50px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover .logo-icon {
+  transform: scale(1.1);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-wy {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8B1E3F;
+}
+
+.logo-psicologia {
+  font-size: 0.9rem;
+  color: #8B1E3F;
+  line-height: 1;
+}
+
+.navegacao {
+  display: flex;
+  gap: 25px;
+}
+
+.navegacao a {
+  text-decoration: none;
+  color: #666;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navegacao a:hover {
+  color: #8B1E3F;
+  transform: rotate(5deg);
+}
+
+/* Animação de sublinhado nos links */
+.navegacao a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #8B1E3F;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navegacao a:hover::after {
+  width: 100%;
+}

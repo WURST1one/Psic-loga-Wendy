@@ -1,0 +1,99 @@
+.rodape {
+  padding: 20px;
+  background-color: #8B1E3F;
+  color: #fff;
+  text-align: center;
+}
+
+.rodape-conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rodape-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rodape-logo img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.rodape-logo:hover img {
+  transform: scale(1.1);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-wy {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-psicologia {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.scroll-to-top {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-5px);
+  color: #F5D6D6;
+}
+
+.rodape p {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.rodape p:hover {
+  color: #F5D6D6;
+}
+
+.github-icon {
+  width: 32px; /* Aumentar o tamanho do ícone */
+  height: 32px;
+  vertical-align: middle;
+  margin-left: 10px; /* Aumentar o espaçamento entre o ícone e o texto */
+  transition: transform 0.3s ease;
+}
+
+.rodape a:hover .github-icon {
+  transform: scale(1.1);
+}
+
+.rodape a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.rodape a:hover {
+  color: #F5D6D6;
+}
+
+.direitos-reservados {
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.direitos-reservados:hover {
+  color: #F5D6D6;
+}
