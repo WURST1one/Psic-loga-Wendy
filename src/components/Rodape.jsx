@@ -1,8 +1,7 @@
 import React from 'react';
 import '../styles/Rodape.css';
 import logoIcon from '../assets/game-icons_brain.svg';
-import githubIcon from '../assets/vector.svg'; // Usar o novo ícone vector.svg
-
+import githubIcon from '../assets/Vector.svg'; 
 const Rodape = () => {
   const scrollToTop = () => {
     window.scrollTo({

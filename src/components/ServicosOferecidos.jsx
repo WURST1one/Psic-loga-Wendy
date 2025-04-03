@@ -32,7 +32,7 @@ const ServicosOferecidos = () => {
           <a href="https://wa.me/+5511991605088" target="_blank" rel="noopener noreferrer">
             <img src={whatsappIcon} alt="WhatsApp" className="social-icon" />
           </a>{' '}
-          (12) 3456-7890.
+         
         </p>
       </div>
     </section>
