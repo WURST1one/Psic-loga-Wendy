@@ -68,10 +68,10 @@
 }
 
 .github-icon {
-  width: 32px; /* Aumentar o tamanho do ícone */
+  width: 32px;
   height: 32px;
   vertical-align: middle;
-  margin-left: 10px; /* Aumentar o espaçamento entre o ícone e o texto */
+  margin-left: 10px;
   transition: transform 0.3s ease;
 }
 
@@ -96,4 +96,61 @@
 
 .direitos-reservados:hover {
   color: #F5D6D6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .rodape {
+    padding: 15px;
+  }
+
+  .rodape-conteudo {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .rodape-logo {
+    justify-content: center;
+  }
+
+  .logo-text {
+    display: none; /* Esconder o texto "Wy Psicologia" no celular */
+  }
+
+  .scroll-to-top {
+    display: none; /* Esconder a seta no celular */
+  }
+
+  .rodape p {
+    font-size: 1rem;
+  }
+
+  .github-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .direitos-reservados {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rodape {
+    padding: 10px;
+  }
+
+  .rodape-logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .github-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .direitos-reservados {
+    font-size: 0.6rem;
+  }
 }

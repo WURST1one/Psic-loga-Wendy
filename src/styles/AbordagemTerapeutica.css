@@ -3,9 +3,9 @@
   background: none;
   color: #fff;
   margin-bottom: 400px;
-}
-
-.abordagem-terapeutica h2 {
+ }
+ 
+ .abordagem-terapeutica h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 80px;
@@ -14,37 +14,75 @@
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.abordagem-terapeutica h2:hover {
+ }
+ 
+ .abordagem-terapeutica h2:hover {
   color: #F5D6D6;
   animation: pulse 0.5s ease;
-}
-
-.abordagem-terapeutica p {
+ }
+ 
+ .abordagem-terapeutica p {
   font-size: 1.3rem;
   line-height: 1.8;
   max-width: 900px;
-  margin: 0 auto; /* Centralizar o texto */
-  margin-top: 100px; /* Manter o deslocamento para baixo */
+  margin: 0 auto;
+  margin-top: 100px;
   transition: transform 0.3s ease;
   background: rgba(139, 30, 63, 0.8);
   padding: 20px;
   border-radius: 10px;
-}
-
-.abordagem-terapeutica p:hover {
+ }
+ 
+ .abordagem-terapeutica p:hover {
   transform: translateY(-5px);
-}
-
-@keyframes pulse {
+ }
+ 
+ @keyframes pulse {
   0% {
-    transform: scale(1);
+  transform: scale(1);
   }
   50% {
-    transform: scale(1.05);
+  transform: scale(1.05);
   }
   100% {
-    transform: scale(1);
+  transform: scale(1);
   }
-}
+ }
+ 
+ /* Responsividade */
+ @media (max-width: 768px) {
+  .abordagem-terapeutica {
+  padding: 30px 20px;
+  margin-bottom: 200px;
+  }
+ 
+  .abordagem-terapeutica h2 {
+  font-size: 1.8rem;
+  margin-bottom: 50px;
+  }
+ 
+  .abordagem-terapeutica p {
+  font-size: 1.1rem;
+  max-width: 100%;
+  margin-top: 50px;
+  padding: 15px;
+  }
+ }
+ 
+ @media (max-width: 480px) {
+  .abordagem-terapeutica {
+  padding: 20px 15px;
+  margin-bottom: 150px;
+  }
+ 
+  .abordagem-terapeutica h2 {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  }
+ 
+  .abordagem-terapeutica p {
+  font-size: 0.9rem;
+  margin-top: 30px;
+  padding: 10px;
+  }
+ }

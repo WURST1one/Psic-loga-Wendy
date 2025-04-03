@@ -1,16 +1,15 @@
 .experiencia-profissional {
   padding: 50px;
   background: none;
-  margin-bottom: 200px; /* Aumentar ainda mais o espaçamento entre seções */
+  margin-bottom: 200px;
 }
 
-/* Restante do CSS permanece o mesmo */
 .experiencia-profissional h2 {
   font-size: 2rem;
   font-weight: bold;
   color: #8B1E3F;
   text-align: center;
-  margin-bottom: 150px;
+  margin-bottom: 200px; /* Aumentar o espaçamento no desktop */
 }
 
 .experiencia-item {
@@ -94,4 +93,85 @@
 .experiencia-texto li:hover {
   transform: translateX(10px);
   color: #8B1E3F;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .experiencia-profissional {
+    padding: 30px 20px;
+  }
+
+  .experiencia-profissional h2 {
+    font-size: 1.8rem;
+    margin-bottom: 80px; /* Reduzir o espaçamento no celular */
+  }
+
+  .experiencia-item {
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 150px;
+  }
+
+  .experiencia-item img {
+    position: static;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  .psicologa-clinica .experiencia-texto,
+  .hospital-sao-lucas .experiencia-texto {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .experiencia-texto h3 {
+    font-size: 1.3rem;
+  }
+
+  .experiencia-texto ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .experiencia-texto li {
+    font-size: 1rem;
+  }
+
+  /* Inverter a ordem dos itens no celular */
+  .experiencia-profissional {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hospital-sao-lucas {
+    order: -1; /* Hospital São Lucas aparece primeiro */
+  }
+}
+
+@media (max-width: 480px) {
+  .experiencia-profissional {
+    padding: 20px 15px;
+  }
+
+  .experiencia-profissional h2 {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+  }
+
+  .experiencia-item {
+    margin-bottom: 100px;
+  }
+
+  .experiencia-item img {
+    max-width: 200px;
+  }
+
+  .experiencia-texto h3 {
+    font-size: 1.1rem;
+  }
+
+  .experiencia-texto li {
+    font-size: 0.9rem;
+  }
 }

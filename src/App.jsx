@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Cabecalho from './components/Cabecalho';
@@ -8,9 +9,12 @@ import ExperienciaProfissional from './components/ExperienciaProfissional';
 import AbordagemTerapeutica from './components/AbordagemTerapeutica';
 import ServicosOferecidos from './components/ServicosOferecidos';
 import Rodape from './components/Rodape';
+import './App.css';
 
 function App() {
   useEffect(() => {
+    document.title = 'Psicóloga Wendy Yope | Home';
+
     AOS.init({
       duration: 1000,
       once: true,
@@ -55,13 +59,21 @@ function App() {
   return (
     <div className="app-container">
       <Cabecalho />
-      <main style={{ paddingTop: '70px' }}>
-        <Introducao />
-        <FormacaoAcademica />
-        <ExperienciaProfissional />
-        <AbordagemTerapeutica />
-        <ServicosOferecidos />
-      </main>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <main style={{ paddingTop: '70px' }}>
+              <Introducao />
+              <FormacaoAcademica />
+              <ExperienciaProfissional />
+              <AbordagemTerapeutica />
+              <ServicosOferecidos />
+            </main>
+          }
+        />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
       <Rodape />
     </div>
   );

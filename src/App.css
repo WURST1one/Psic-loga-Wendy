@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -39,4 +41,30 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Adicionar padding-top ao main para evitar sobreposição com o header fixo */
+main {
+  padding-top: 140px; /* Aumentar o padding para desktop */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  main {
+    padding-top: 160px; /* Ajustar para a altura do header em tablets */
+  }
+
+  #root {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 120px; /* Ajustar para a altura do header em celulares */
+  }
+
+  #root {
+    padding: 0.5rem;
+  }
 }
