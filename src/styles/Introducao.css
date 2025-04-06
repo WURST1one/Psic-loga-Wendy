@@ -1,21 +1,31 @@
 .introducao {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 100px 50px;
+  padding: 80px 50px; /* Padding interno */
+  padding-right: 100px; /* Adicionado padding-right para mais espaço visual */
   min-height: 100vh;
   background: none;
-  margin-bottom: 200px;
-  gap: 200px; /* 🔹 Aumentei ainda mais a distância entre texto e imagem */
+  margin-bottom: 100px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; /* Garante que o float não quebre o layout */
 }
 
+/* Estilos do conteúdo da introdução */
 .introducao-conteudo {
-  max-width: 50%;
-  text-align: left;
-  margin-left: 50px;
+  width: 35%; /* Reduzido de 40% para 35% para liberar espaço */
+  margin-right: 200px; /* Mantido em 200px para um espaço significativo */
   background: rgba(255, 255, 255, 0.8);
   padding: 30px;
   border-radius: 10px;
+  float: left; /* Posiciona o texto à esquerda */
+  text-align: left;
+}
+
+/* Garante que o layout não quebre após o float */
+.introducao::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .introducao-conteudo h1 {
@@ -60,13 +70,17 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilos da imagem */
 .introducao-imagem {
-  max-width: 50%;
+  width: 30%; /* Reduzido de 35% para 30% para liberar espaço */
+  max-width: 400px; /* Limita o tamanho máximo da imagem */
+  float: left; /* Posiciona a imagem à esquerda, ao lado do texto */
 }
 
 .introducao-imagem img {
   width: 100%;
-  max-width: 450px;
+  height: auto;
+  display: block; /* Evita margens extras que podem causar deslocamento */
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
@@ -79,47 +93,52 @@
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .introducao {
-    flex-direction: column;
-    padding: 80px 20px;
-    min-height: auto;
-    gap: 100px; /* 🔹 Aumentei ainda mais no mobile */
+    padding-right: 80px; /* Reduz o padding-right em telas menores */
   }
 
   .introducao-conteudo {
-    max-width: 100%;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .introducao-conteudo h1 {
-    font-size: 2rem;
-  }
-
-  .introducao-conteudo p {
-    font-size: 1rem;
-  }
-
-  .introducao-conteudo button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+    width: 40%; /* Ajusta a largura para telas menores */
+    margin-right: 150px; /* Reduz o espaço para 150px em telas menores */
   }
 
   .introducao-imagem {
-    max-width: 100%;
-    margin-top: 20px;
+    width: 35%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .introducao {
+    padding: 80px 20px;
+    padding-right: 20px; /* Remove o padding-right extra em telas menores */
+    min-height: auto;
   }
 
-  .introducao-imagem img {
+  .introducao-conteudo {
+    float: none; /* Remove o float para empilhar */
+    width: 100%; /* Ocupa a largura total */
+    margin-right: 0; /* Remove a margem */
+    margin-bottom: 80px; /* Mantém o espaço vertical */
+    text-align: center;
+  }
+
+  .introducao-imagem {
+    float: none; /* Remove o float para empilhar */
+    width: 100%; /* Ocupa a largura total */
     max-width: 350px;
+    margin: 0 auto; /* Centraliza a imagem */
   }
 }
 
 @media (max-width: 480px) {
   .introducao {
     padding: 60px 15px;
-    gap: 80px; /* 🔹 Mais espaço no mobile */
+  }
+
+  .introducao-conteudo {
+    margin-bottom: 60px; /* Reduz o espaço vertical em telas pequenas */
   }
 
   .introducao-conteudo h1 {
@@ -135,7 +154,7 @@
     padding: 8px 15px;
   }
 
-  .introducao-imagem img {
-    max-width: 300px;
+  .introducao-imagem {
+    max-width: 300px; /* Mantém o tamanho menor no mobile */
   }
 }

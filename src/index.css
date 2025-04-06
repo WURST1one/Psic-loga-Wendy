@@ -1,22 +1,30 @@
-/* Reset básico */
+/* Reset para evitar scroll lateral */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  transition: background-color 0.5s ease; /* Transição suave para a cor de fundo */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 🔹 Impede a rolagem horizontal */
 }
 
-.app-container {
+.introducao {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* 🔹 Evita que os elementos "estiquem" a tela no mobile */
+  padding: 80px 20px;
   min-height: 100vh;
+  background: none;
+  margin-bottom: 100px;
+  gap: 50px; /* 🔹 Reduzi o espaçamento para evitar deslocamentos */
 }
 
-main {
-  flex: 1;
+.introducao-imagem img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block; /* 🔹 Evita margens extras que podem causar o deslocamento */
 }
